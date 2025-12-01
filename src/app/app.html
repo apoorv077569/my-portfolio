@@ -1,0 +1,271 @@
+<div class="bg-black min-h-screen text-white font-[Poppins] px-8 md:px-24 py-10">
+
+<!-- ============== NAVBAR ============== -->
+<nav class="flex justify-between items-center py-3">
+
+  <!-- Logo -->
+  <h1 class="text-2xl font-semibold">
+    Apoorv <span class="text-green-400">Rathore</span>
+  </h1>
+
+  <!-- Desktop Nav -->
+  <ul class="hidden md:flex gap-6 text-gray-300">
+    <li><a href="#home" class="hover:text-green-400">Home</a></li>
+    <li><a href="#experience" class="hover:text-green-400">Experience</a></li>
+    <li><a href="#projects" class="hover:text-green-400">Projects</a></li>
+    <li><a href="#education" class="hover:text-green-400">Education</a></li>
+    <li><a href="#skills" class="hover:text-green-400">Skills</a></li>
+    <li><a href="#contact" class="hover:text-green-400">Contact</a></li>
+  </ul>
+
+  <!-- Theme Toggle -->
+  <button 
+    (click)="toggleTheme()" 
+    class="hidden md:block px-3 py-1 border border-gray-500 rounded text-sm hover:bg-gray-700 duration-200 ml-4"
+  >
+    {{ theme() === 'dark' ? 'Light' : 'Dark' }}
+  </button>
+
+  <!-- Mobile Toggle -->
+  <button class="md:hidden text-3xl" (click)="toggleNav()">☰</button>
+</nav>
+<a 
+  href="../assets/ResumeApoorvAndroid.pdf"
+  download="Apoorv_Rathore_Resume.pdf"
+  class="px-5 py-2 border border-green-400 text-green-400 rounded hover:bg-green-400 hover:text-black duration-200 inline-block"
+>
+  Download Resume
+</a>
+
+
+<!-- Mobile Menu -->
+<ul *ngIf="navOpen()" class="flex flex-col gap-4 text-gray-300 mt-4 md:hidden text-lg">
+  <li><a href="#home" (click)="toggleNav()">Home</a></li>
+  <li><a href="#experience" (click)="toggleNav()">Experience</a></li>
+  <li><a href="#projects" (click)="toggleNav()">Projects</a></li>
+  <li><a href="#education" (click)="toggleNav()">Education</a></li>
+  <li><a href="#skills" (click)="toggleNav()">Skills</a></li>
+  <li><a href="#contact" (click)="toggleNav()">Contact</a></li>
+
+  <!-- Theme Toggle Mobile -->
+  <li>
+    <button 
+      (click)="toggleTheme()" 
+      class="px-3 py-1 border border-gray-500 rounded text-sm hover:bg-gray-700 duration-200"
+    >
+      {{ theme() === 'dark' ? 'Light' : 'Dark' }}
+    </button>
+  </li>
+</ul>
+
+
+
+  <!-- HERO SECTION -->
+  <section id="home" class="mt-20">
+    <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+      Hi, I'm <span class="text-green-400">Apoorv Rathore</span>
+    </h1>
+    <h2 class="text-xl md:text-2xl text-gray-300 mt-2">Android Developer • Kotlin / Java</h2>
+
+    <p class="text-gray-400 max-w-xl mt-4 leading-7">
+      I develop scalable Android apps using MVVM, Firebase, Retrofit,
+      with modern UI and real-time features.
+      Passionate about building clean, structured & high performance mobile apps.
+    </p>
+
+    <div class="flex gap-4 mt-8">
+      <a href="#contact"
+        class="px-5 py-2 bg-green-400 text-black font-semibold rounded hover:bg-green-500 duration-150">
+        Hire Me
+      </a>
+      <a href="#projects"
+        class="px-5 py-2 border border-green-400 rounded text-green-400 hover:bg-green-400 hover:text-black duration-150">
+        View Projects
+      </a>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience" class="mt-28">
+    <h2 class="text-3xl font-bold">
+      Experience <span class="text-green-400">.</span>
+    </h2>
+
+    <div class="mt-10 border border-gray-800 p-6 rounded-lg">
+
+      <h3 class="text-xl font-semibold">Android Full Stack Developer</h3>
+      <p class="text-gray-400 text-sm">Jul 2025 – Current</p>
+      <p class="text-gray-400 text-sm mt-1">The Fuse Market Pvt. Ltd., Lucknow, India</p>
+
+      <ul class="text-gray-300 mt-4 space-y-1 list-disc ml-6">
+        <li>Worked as an Android developer handling end-to-end mobile application development using Java and XML.</li>
+        <li>Implemented clean architecture using MVVM pattern with Retrofit and OkHttp for API communication.</li>
+        <li>Used SharedPreferences for secure user session management and data persistence.</li>
+        <li>Built modern and responsive UI using Material Design components to enhance user experience.</li>
+        <li>Collaborated with cross-functional teams using Git to deliver multiple stable features within project
+          timelines.</li>
+      </ul>
+
+    </div>
+
+  </section>
+
+  <!-- Projects -->
+<section id="projects" class="mt-28">
+
+  <h2 class="text-3xl font-bold">
+    Projects <span class="text-green-400">.</span>
+  </h2>
+
+  <div class="grid md:grid-cols-3 gap-6 mt-10">
+
+    <!-- PROJECT 1 -->
+    <div class="border border-gray-800 p-6 rounded-lg hover:border-green-400 duration-300">
+      <h3 class="text-xl font-semibold">PlayZelo - Jackpot Game Application</h3>
+      <p class="text-gray-400 text-sm mt-1">Android, Java, Retrofit, MVVM</p>
+
+      <ul class="text-gray-300 mt-4 space-y-1 list-disc ml-6">
+        <li>Developed a single-player real-money jackpot game featuring a 3D spin wheel system inspired by roulette, using Java and XML.</li>
+        <li>Implemented MVVM architecture with ViewModel and Repository pattern for clean, maintainable and scalable code.</li>
+        <li>Integrated Retrofit for secure API communication to manage user authentication and spin-and-win game logic.</li>
+        <li>Designed an interactive and responsive UI with smooth spin animations for an engaging gameplay experience.</li>
+      </ul>
+
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="border border-gray-800 p-6 rounded-lg hover:border-green-400 duration-300">
+      <h3 class="text-xl font-semibold">PlayZelo - Ludo Game Application</h3>
+      <p class="text-gray-400 text-sm mt-1">Android, Java, Node.js, WebSockets, MVVM</p>
+
+      <ul class="text-gray-300 mt-4 space-y-1 list-disc ml-6">
+        <li>Built a real-time online multiplayer Ludo game for 2–4 players using Java and WebSocket-based communication.</li>
+        <li>Implemented MVVM architecture with ViewModel and Repository pattern to ensure clean, modular and scalable code.</li>
+        <li>Integrated a Node.js backend with WebSockets for live dice rolls, token movement, room creation and state synchronization.</li>
+      </ul>
+      
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="border border-gray-800 p-6 rounded-lg hover:border-green-400 duration-300">
+      <h3 class="text-xl font-semibold">StreamChat – Real-Time Chat App</h3>
+      <p class="text-gray-400 text-sm mt-1">Android, Java, Firebase, FCM</p>
+
+      <ul class="text-gray-300 mt-4 space-y-1 list-disc ml-6">
+        <li>Developed a real-time chat application using Firebase Firestore for storing and syncing user messages.</li>
+        <li>Used FCM tokens for user authentication and secure session management.</li>
+        <li>Implemented AES-based message encryption before saving messages to Firestore.</li>
+        <li>Designed a clean and responsive chat UI using XML with seamless message updates and offline caching.</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- Education -->
+<section id="education" class="mt-28">
+
+  <h2 class="text-3xl font-bold">
+    Education <span class="text-green-400">.</span>
+  </h2>
+
+  <div class="mt-10 space-y-6">
+
+    <div class="border border-gray-800 p-6 rounded-lg">
+      <h3 class="text-xl font-semibold">Bachelor of Technology in Information Technology (B.Tech)</h3>
+      <p class="text-gray-400 text-sm">Aug 2021 – Jun 2025</p>
+      <p class="text-gray-400 text-sm">Noida Institute of Engineering and Technology, Greater Noida, Uttar Pradesh</p>
+    </div>
+
+    <div class="border border-gray-800 p-6 rounded-lg">
+      <h3 class="text-xl font-semibold">Intermediate (+2)</h3>
+      <p class="text-gray-400 text-sm">Apr 2020 – July 2021</p>
+      <p class="text-gray-400 text-sm">CBSE Board - Ayan National Public School, Greater Noida, Uttar Pradesh</p>
+    </div>
+
+    <div class="border border-gray-800 p-6 rounded-lg">
+      <h3 class="text-xl font-semibold">High School</h3>
+      <p class="text-gray-400 text-sm">Apr 2018 – May 2019</p>
+      <p class="text-gray-400 text-sm">CBSE Board - Ayan National Public School, Greater Noida, Uttar Pradesh</p>
+    </div>
+
+  </div>
+
+</section>
+<!-- Skills -->
+<section id="skills" class="mt-28">
+
+  <h2 class="text-3xl font-bold">
+    Technical Skills <span class="text-green-400">.</span>
+  </h2>
+
+  <div class="grid md:grid-cols-3 gap-6 mt-10">
+
+    <div class="border border-gray-800 p-6 rounded-lg">
+      <h3 class="text-lg font-semibold">Languages</h3>
+      <ul class="text-gray-300 mt-3 space-y-1 list-disc ml-6">
+        <li>Kotlin</li>
+        <li>Java</li>
+        <li>XML</li>
+        <li>SQL</li>
+        <li>Python</li>
+      </ul>
+    </div>
+
+    <div class="border border-gray-800 p-6 rounded-lg">
+      <h3 class="text-lg font-semibold">Tools</h3>
+      <ul class="text-gray-300 mt-3 space-y-1 list-disc ml-6">
+        <li>Android Studio</li>
+        <li>Firebase</li>
+        <li>Retrofit</li>
+        <li>Git</li>
+        <li>Postman</li>
+      </ul>
+    </div>
+
+    <div class="border border-gray-800 p-6 rounded-lg">
+      <h3 class="text-lg font-semibold">Databases</h3>
+      <ul class="text-gray-300 mt-3 space-y-1 list-disc ml-6">
+        <li>SQLite</li>
+        <li>Firebase Firestore</li>
+        <li>MySQL</li>
+        <li>PostgreSQL</li>
+
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+<!-- Contact -->
+<section id="contact" class="mt-28 mb-20 text-center">
+
+  <h2 class="text-3xl font-bold">
+    Contact <span class="text-green-400">.</span>
+  </h2>
+
+  <p class="text-gray-400 mt-4">
+    Phone: +91 9634607848
+  </p>
+  <p class="text-gray-400">
+    Email: apoorvrathore699@gmail.com
+  </p>
+  <p class="text-gray-400">
+    LinkedIn: linkedin.com/apoorvrathore
+  </p>
+  <p class="text-gray-400">
+    GitHub: github.com/apoorvrathore
+  </p>
+
+    <a 
+    href="assets/resume.pdf"
+    download="Apoorv_Rathore_Resume.pdf"
+    class="mt-6 inline-block px-6 py-2 border border-green-400 rounded text-green-400 hover:bg-green-400 hover:text-black duration-200"
+  >
+    Download Resume
+  </a>
+
+</section>
+
+</div>
