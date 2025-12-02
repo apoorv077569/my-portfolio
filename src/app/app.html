@@ -1,4 +1,6 @@
-<div class="bg-black min-h-screen text-white font-[Poppins] px-8 md:px-24 py-10">
+<div [class.dark]="theme() === 'dark'">
+  <div class="min-h-screen font-[Poppins] px-8 md:px-24 py-10 
+              bg-white text-black dark:bg-black dark:text-white transition duration-300">
 
   <!-- ============== NAVBAR ============== -->
   <nav class="flex justify-between items-center py-3">
@@ -18,11 +20,7 @@
       <li><a href="#contact" class="hover:text-green-400">Contact</a></li>
     </ul>
 
-    <!-- Theme Toggle -->
-    <button (click)="toggleTheme()"
-      class="hidden md:block px-3 py-1 border border-gray-500 rounded text-sm hover:bg-gray-700 duration-200 ml-4">
-      {{ theme() === 'dark' ? 'Light' : 'Dark' }}
-    </button>
+  
 
     <!-- Mobile Toggle -->
     <button class="md:hidden text-3xl" (click)="toggleNav()">☰</button>
@@ -42,13 +40,7 @@
     <li><a href="#skills" (click)="toggleNav()">Skills</a></li>
     <li><a href="#contact" (click)="toggleNav()">Contact</a></li>
 
-    <!-- Theme Toggle Mobile -->
-    <li>
-      <button (click)="toggleTheme()"
-        class="px-3 py-1 border border-gray-500 rounded text-sm hover:bg-gray-700 duration-200">
-        {{ theme() === 'dark' ? 'Light' : 'Dark' }}
-      </button>
-    </li>
+  
   </ul>
 
 
@@ -233,6 +225,73 @@
     </div>
 
   </section>
+
+  <!-- Research Work -->
+<section id="research" class="mt-28">
+
+  <h2 class="text-3xl font-bold flex items-center gap-2">
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" 
+         class="w-8 h-8 invert" />
+    Research & Publications <span class="text-green-400">.</span>
+  </h2>
+
+  <div class="mt-10 border border-gray-800 p-6 rounded-lg">
+
+    <h3 class="text-xl font-semibold flex items-center gap-2">
+      <img src="https://cdn-icons-png.flaticon.com/512/471/471662.png"
+           class="w-5 h-5 invert" />
+      WebVersity: A Scalable E-Learning Platform with Real-Time Dashboards & Notes Marketplace
+    </h3>
+
+    <p class="text-gray-400 text-sm mt-1 flex items-center gap-2">
+      <img src="https://cdn-icons-png.flaticon.com/512/599/599502.png"
+           class="w-4 h-4 invert" />
+      Published in <strong>IJRTI — International Journal for Research Trends and Innovation</strong>
+    </p>
+
+    <p class="text-gray-400 text-sm flex items-center gap-2">
+      <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png"
+           class="w-4 h-4 invert" />
+      Paper ID: IJRTI2506155
+    </p>
+
+    <ul class="text-gray-300 mt-4 space-y-1 list-disc ml-6">
+      <li>Built an e-learning platform with real-time dashboards and course analytics.</li>
+      <li>Implemented secure payments using Razorpay and OTP verification using Twilio.</li>
+      <li>Designed backend APIs for scalable data flow with MySQL and Python flask.</li>
+      <li>Integrated handwritten notes marketplace supporting free & premium notes.</li>
+    </ul>
+
+    <!-- Buttons -->
+    <div class="flex gap-4 mt-6">
+
+      <!-- Research Paper Button -->
+      <a href="assets/reserach_paper.pdf"
+         download="Apoorv_Rathore_Research_Paper.pdf"
+         class="flex items-center gap-2 px-4 py-2 border border-green-400 text-green-400 rounded 
+                hover:bg-green-400 hover:text-black duration-200">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png"
+             class="w-4 h-4 invert" />
+        Download Paper
+      </a>
+
+      <!-- Certificate Button -->
+      <a href="assets/Apoorv_IJRTI_Certificate.pdf"
+         download="Apoorv_Rathore_IJRTI_Certificate.pdf"
+         class="flex items-center gap-2 px-4 py-2 border border-green-400 text-green-400 rounded 
+                hover:bg-green-400 hover:text-black duration-200">
+        <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png"
+             class="w-4 h-4 invert" />
+        Download Certificate
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
   <!-- Skills -->
   <section id="skills" class="mt-28">
 
@@ -261,6 +320,7 @@
           <li>Retrofit</li>
           <li>Git</li>
           <li>Postman</li>
+          <li>Supabase</li>
         </ul>
       </div>
 
@@ -354,5 +414,5 @@
 </footer>
 
 
-
+</div>
 </div>
